@@ -1,0 +1,31 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui"> 
+  <ribbon startFromScratch="false"> 
+    <tabs> 
+      <tab id="CustomTab" label="Fluid Power" insertBeforeMso="TabHome"> 
+        <group id="SimpleControls" label="Design Record Control"> 
+          <button id="Button1" imageMso="CitationMark" size="large" 
+            label="New" 
+            onAction="ThisWorkbook.New_Record" /> 
+          <button id="Button2" imageMso="ImportMoreMenu" size="large" 
+            label="Send Record to Eval" 
+            onAction="ThisWorkbook.Load_Record" />
+          <button id="Button3" imageMso="FileSave" size="large" 
+            label="Send Record To Log" 
+            onAction="ThisWorkbook.Save_Record" />
+          <button id="Button4" imageMso="DatabasePermissionsMenu" size="large" 
+            label="Protect Record" 
+            onAction="ThisWorkbook.Protect_Record" /> 
+          <button id="Button5" imageMso="TableRowsInsertAboveWord" size="large" 
+            label="Previous" 
+            onAction="ThisWorkbook.Prev_Record" /> 
+          <button id="Button6" imageMso="TableRowsInsertBelowWord" size="large" 
+            label="Next" 
+            onAction="ThisWorkbook.Next_Record" /> 
+          <button id="Button7" imageMso="DesignMode" size="large" 
+            label="Draw Prints" 
+            onAction="ThisWorkbook.Make_Drawing" /> 
+        </group> 
+      </tab> 
+    </tabs> 
+  </ribbon> 
+</customUI>
