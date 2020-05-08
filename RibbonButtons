@@ -1,0 +1,61 @@
+Sub New_Record(ByVal control As IRibbonControl)
+   Range("OH10").Select
+End Sub
+Sub Load_Record(ByVal control As IRibbonControl)
+
+' Make a routine to select a record
+' Currently you must copy and Paste the record you want into the Buffer
+    
+    Sheets("Log").Select
+    If Range("A3") = "Clear" Then
+        MsgBox ("Buffer Empty, Load Canceled")
+    ElseIf Range("A3") = "Locked" Then
+        MsgBox ("Record in Buffer is Locked, Loading as Read Only")
+        MoveFromBuffer
+        Sheets("Design Evaluation").Select
+        Range("A1").Select
+    Else
+        MoveFromBuffer
+        MsgBox ("Buffer Loaded to Design Sheet")
+        Sheets("Design Evaluation").Select
+        Range("A1").Select
+    End If
+
+End Sub
+Sub Copy_Record(ByVal control As IRibbonControl)
+   MsgBox ("Function to Copy a Record has not been added yet")
+End Sub
+Sub Protect_Record(ByVal control As IRibbonControl)
+
+' Just a Routine to check if the Buffer is locked, needs function to "freeze" a Design
+
+    Sheets("Log").Select
+    If Range("A3") = "Locked" Then
+        MsgBox ("Buffer Is Locked")
+    Else
+        MsgBox ("Buffer Is Not Locked")
+    End If
+    
+End Sub
+Sub Save_Record(ByVal control As IRibbonControl)
+
+    Sheets("Log").Select
+    If Range("A3") = "Clear" Then
+        MoveToBuffer
+        MsgBox ("Design Sheet Loaded to Buffer. Records Still Manually Switched by Copy and Paste of Rows.")
+    Else
+        MsgBox ("Buffer not Cleared and Ready for a New Record. Save Canceled.")
+    End If
+    
+' Make a Routine to Copy and Clear the Buffer to the right record location
+
+End Sub
+Sub Next_Record(ByVal control As IRibbonControl)
+   MsgBox ("Next Record Button Not Started")
+End Sub
+Sub Prev_Record(ByVal control As IRibbonControl)
+   MsgBox ("Prev Record Button Not Started")
+End Sub
+Sub Make_Drawing(ByVal control As IRibbonControl)
+   MsgBox ("Draw Prints Button Not Started")
+End Sub
