@@ -1,0 +1,24 @@
+Sub ChkLastUntil()
+    counter = 0
+    myNum = 21
+    Do
+        myNum = myNum + 1
+        counter = counter + 1
+    Cells(myNum, 398).Cut
+        Range("OH1").Select
+        Selection.End(xlToRight).Select
+        ActiveCell.Offset(0, 1).Range("A1").Select
+        ActiveSheet.Paste
+    Cells(myNum, 399).Cut
+        Range("OH1").Select
+        Selection.End(xlToRight).Select
+        ActiveCell.Offset(0, 1).Range("A1").Select
+        ActiveSheet.Paste
+    Cells(myNum, 400).Cut
+        Range("OH1").Select
+        Selection.End(xlToRight).Select
+        ActiveCell.Offset(0, 1).Range("A1").Select
+        ActiveSheet.Paste
+    Loop Until myNum = 80
+    MsgBox "The loop made " & counter & " repetitions."
+End Sub
