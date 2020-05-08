@@ -1,0 +1,272 @@
+Sub MoveFromBuffer()
+' MoveFromBuffer Macro
+    '
+    ' Header Cells
+    '
+    Sheets("Log").Select
+    Range("B3:C3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C4:D4").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("D3:E3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C5:D5").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("F3:G3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C6:D6").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("H3:I3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C7:D7").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("J3:K3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C8:D8").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("L3:M3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C9:D9").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("N3:O3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C10:D10").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("P3:Q3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C11:D11").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("R3:S3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C12:D12").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("T3:U3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C13:D13").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("V3:W3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C14:D14").Select
+    ActiveSheet.Paste
+    '
+    'Application Condition Cells
+    '
+    Sheets("Log").Select
+    Range("X3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C17").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("Y3:Z3").Cut
+    Sheets("Design Evaluation").Select
+    Range("E17:F17").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AA3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C18").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AB3:AC3").Cut
+    Sheets("Design Evaluation").Select
+    Range("E18:F18").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AD3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C19").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AE3:AF3").Cut
+    Sheets("Design Evaluation").Select
+    Range("E19:F19").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AG3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C20").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AH3:AI3").Cut
+    Sheets("Design Evaluation").Select
+    Range("E20:F20").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AJ3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C21").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AK3:AL3").Cut
+    Sheets("Design Evaluation").Select
+    Range("E21:F21").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AM3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C22").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AN3:AO3").Cut
+    Sheets("Design Evaluation").Select
+    Range("E22:F22").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AP3:AS3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C23:F23").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AT3:AW3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C24:F24").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("AX3:BA3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C25:F25").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("BB3:BE3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C26:F26").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("BF3:BI3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C27:F27").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("BJ3:BM3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C28:F28").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("BN3:BQ3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C29:F29").Select
+    ActiveSheet.Paste
+    '
+    Sheets("Log").Select
+    Range("BR3:BU3").Cut
+    Sheets("Design Evaluation").Select
+    Range("C30:F30").Select
+    ActiveSheet.Paste
+    '
+    'Outer Assm. Comp. Dims.
+    '
+    Design_Sht_Row = 55
+    Log_Sht_Col_Srt = 70
+    Do
+        Design_Sht_Row = Design_Sht_Row + 1
+        Log_Sht_Col_Srt = Log_Sht_Col_Srt + 4
+        Log_Sht_Col4 = Log_Sht_Col_Srt + 3
+        Sheets("Log").Select
+        Range(Cells(3, Log_Sht_Col_Srt), Cells(3, Log_Sht_Col4)).Cut
+        Sheets("Design Evaluation").Select
+        Range(Cells(Design_Sht_Row, 3), Cells(Design_Sht_Row, 6)).Select
+        ActiveSheet.Paste
+    Loop Until Design_Sht_Row = 65
+    '
+    'Inner Assm. Comp. Dims.
+    '
+    Design_Sht_Row = 66
+    Do
+        Design_Sht_Row = Design_Sht_Row + 1
+        Log_Sht_Col_Srt = Log_Sht_Col_Srt + 4
+        Log_Sht_Col4 = Log_Sht_Col_Srt + 3
+        Sheets("Log").Select
+        Range(Cells(3, Log_Sht_Col_Srt), Cells(3, Log_Sht_Col4)).Cut
+        Sheets("Design Evaluation").Select
+        Range(Cells(Design_Sht_Row, 3), Cells(Design_Sht_Row, 6)).Select
+        ActiveSheet.Paste
+    Loop Until Design_Sht_Row = 76
+    '
+    'Seal Dynamic Comp. Dims.
+    '
+    Design_Sht_Row = 77
+    Do
+        Design_Sht_Row = Design_Sht_Row + 1
+        Log_Sht_Col_Srt = Log_Sht_Col_Srt + 4
+        Log_Sht_Col4 = Log_Sht_Col_Srt + 3
+        Sheets("Log").Select
+        Range(Cells(3, Log_Sht_Col_Srt), Cells(3, Log_Sht_Col4)).Cut
+        Sheets("Design Evaluation").Select
+        Range(Cells(Design_Sht_Row, 3), Cells(Design_Sht_Row, 6)).Select
+        ActiveSheet.Paste
+    Loop Until Design_Sht_Row = 97
+    '
+    'Seal Energizing Comp. Dims.
+    '
+    Design_Sht_Row = 98
+    Do
+        Design_Sht_Row = Design_Sht_Row + 1
+        Log_Sht_Col_Srt = Log_Sht_Col_Srt + 4
+        Log_Sht_Col4 = Log_Sht_Col_Srt + 3
+        Sheets("Log").Select
+        Range(Cells(3, Log_Sht_Col_Srt), Cells(3, Log_Sht_Col4)).Cut
+        Sheets("Design Evaluation").Select
+        Range(Cells(Design_Sht_Row, 3), Cells(Design_Sht_Row, 6)).Select
+        ActiveSheet.Paste
+    Loop Until Design_Sht_Row = 118
+    '
+    'Seal Supporting Comp. Dims.
+    '
+    Design_Sht_Row = 119
+    Do
+        Design_Sht_Row = Design_Sht_Row + 1
+        Log_Sht_Col_Srt = Log_Sht_Col_Srt + 4
+        Log_Sht_Col4 = Log_Sht_Col_Srt + 3
+        Sheets("Log").Select
+        Range(Cells(3, Log_Sht_Col_Srt), Cells(3, Log_Sht_Col4)).Cut
+        Sheets("Design Evaluation").Select
+        Range(Cells(Design_Sht_Row, 3), Cells(Design_Sht_Row, 6)).Select
+        ActiveSheet.Paste
+    Loop Until Design_Sht_Row = 139
+    '
+    'Assembly Stackup Calc Values
+    '
+    Sheets("Log").Select
+    Range("OD3:XI3").ClearContents
+    Range("OD3:XI3").ClearFormats
+    Range("A3") = "Clear"
+    
+End Sub
